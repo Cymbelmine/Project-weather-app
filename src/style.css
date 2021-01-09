@@ -4,7 +4,7 @@ body {
 h1 {
   font-size: 24px;
   font-weight: 100;
-  color: #878787;
+  color: #19456b;
   line-height: 28px;
   margin-bottom: 0;
 }
@@ -18,7 +18,7 @@ li {
   margin: 0;
   padding: 0;
   line-height: 22px;
-  color: #878787;
+  color: #19456b;
   list-style: none;
 }
 li:first-letter {
@@ -32,7 +32,7 @@ li:first-letter {
   padding: 20px;
   border: 1px solid lightgrey;
   border-radius: 8px;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
 }
 .overview {
   margin-bottom: 18px;
@@ -67,7 +67,7 @@ li:first-letter {
   margin-top: 10px;
 }
 .weather-forecast h3 {
-  color: rgb(186, 186, 186);
+  color: #11698e;
   font-size: 14px;
   font-weight: 480;
   text-align: center;
@@ -83,7 +83,7 @@ li:first-letter {
 }
 .weather-forecast-temperature {
   text-align: center;
-  color: rgb(135, 135, 135);
+  color: #11698e;
   font-size: 13px;
   font-weight: 480;
   height: auto;
@@ -94,7 +94,11 @@ li:first-letter {
   margin-top: 6px;
   color: gray;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  position: relative;
+  left: 490px;
 }
 #city-input {
   width: 50%;
+  position: relative;
+  left: 290px;
 }
