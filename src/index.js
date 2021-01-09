@@ -37,7 +37,7 @@ axios.get(apiUrl).then(showForecast);
 function submitCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
-let city = document.querySelector("h1");
+let city = document.querySelector("#city");
   if (searchInput.value) {
     city.innerHTML = `${
       searchInput.value.charAt(0).toUpperCase() + searchInput.value.slice(1)
@@ -77,14 +77,4 @@ function showWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-}
-
-function getPosition(position) {
-  let apiKey = "747707261d2068249e8900a1bcf9371c";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let units = "metric";
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
-  let url = `${apiEndpoint}lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
-  axios.get(url).then(showWeather);
 }
