@@ -127,14 +127,6 @@ footer {
   position: relative;
   top: 10px;
 }
-#locationButton {
-  margin: 4px;
-  border: none;
-  border-radius: 5px;
-  opacity: 60%;
-  font-size: 0.8em;
-  position: relative;
-}
 #descriptors {
   opacity: 75%;
   font-size: 2em;

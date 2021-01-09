@@ -94,11 +94,3 @@ function getPosition(position) {
   let url = `${apiEndpoint}lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
   axios.get(url).then(showWeather);
 }
-
-function clickButtonL(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(getPosition);
-}
-
-let clickL = document.querySelector("#locationButton");
-clickL.addEventListener("click", clickButtonL);
