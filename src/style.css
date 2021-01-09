@@ -1,98 +1,50 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 h1 {
-  padding-top: 15px;
+  font-size: 24px;
+  font-weight: 100;
+  color: gray;
+  line-height: 28px;
   margin-bottom: 0;
   margin-top: 0;
 }
-input {
-  float: right;
-  right: 0;
-  margin-top: 5px;
-  margin-left: 2px;
-  opacity: 80%;
+ul {
+  margin: 0;
+  padding: 0;
 }
-button {
-  float: right;
-  margin: 4px;
-  height: 34px;
-  opacity: 60%;
-}
-ul li {
+li {
   list-style: none;
-  position: relative;
-  top: 20px;
-  right: 35px;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  color: gray;
 }
-span {
-  font-weight: bold;
-  font-size: 40px;
-  margin-bottom: 10px;
+li:first-letter {
+  text-transform: capitalize;
 }
 footer {
   margin-top: 15px;
   font-size: smaller;
 }
-.main {
-  border: 1px solid black;
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.weather-app {
+  padding: 20px;
+  border: 1px solid lightgray;
   border-radius: 8px;
-  max-width: 580px;
-  height: 400px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
 }
-.city {
-  height: 33px;
-  max-width: 160px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: 130px 130px;
-  grid-template-rows: 40px 40px;
-  grid-gap: 8px;
-  font-size: 26px;
-  font-family: "Open Sans", sans-serif;
-  padding: 0;
-}
-.card {
-  background: #fafdff;
-  font-family: "Open Sans", sans-serif;
-  opacity: 85%;
-}
-.col-2 {
-  padding: 0px;
-  margin: 3px auto;
-}
-.cloud-rain-main {
-  text-align: center;
-  font-size: 40px;
-  color: #7579e7;
-  margin: 6px 8px;
-}
-.cloud-rain {
-  text-align: center;
-  font-size: 40px;
-  color: #7579e7;
-  margin: 6px 8px;
-}
-.snowflake {
-  text-align: center;
-  font-size: 40px;
-  color: #b2f3f0;
-  margin: 6px 8px;
-}
-.cloud {
-  text-align: center;
-  font-size: 40px;
-  color: #9ad3f1;
-  margin: 6px 8px;
-}
-.cloud-sun {
-  text-align: center;
-  font-size: 40px;
-  color: #f2d974;
-  margin: 6px 8px;
-}
+
 #date_and_time {
   float: left;
   position: absolute;
