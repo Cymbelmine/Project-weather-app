@@ -21,7 +21,6 @@
     <div class="main">
         <div class="container all">
             <small id="date">
-                November 23rd 11:10
             </small>
 
             <form id="searchCityForm" class="mb-3">
@@ -37,7 +36,6 @@
             <h1 id="city"></h1>
             <ul>
                 <li id="description">
-                    Rainy
                 </li>
             </ul>
             <div class="col-6" id="descriptors">
@@ -48,12 +46,14 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <div class="clearfix" id="cloud">
-                        <i class="fas fa-cloud-rain cloud-rain-main"></i>
+                    <div class="clearfix temperature">
+                        <img src="" alt="" id="icon" class="float-left">
+                        <div class="float-left">
+                        <strong id="temperature"></strong>
                     </div>
-                    <span class="temperature" id="celsius">19°C</span><span class="unit"> <button
-                            class="btn btn-light shadow-sm" id="fahrenheitButton"> ºF</button><button
-                            class="btn btn-light shadow-sm" id="celsiusButton">ºC</button></span>
+                    <span class="units" id="celsius">
+                    <a href="#" id="celsius-link" class="active"> ºC</a> | <a href="#" id="fahrenheit-link" class="active">ºF</a>
+                    </span>
                     <div class="float-left" id="unit">
                     </div>
                     <br>

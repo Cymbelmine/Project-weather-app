@@ -27,6 +27,31 @@ let formattedDate = `${day}, ${month} ${date}, ${time}, ${year}`;
 console.log(formattedDate);
 dateTime.innerHTML = formattedDate;
 
+let celsiusTemperature = null;
+
+function showWeather(response) {
+  let temperature = document.querySelector("#temperature");
+  let city = document.querySelector("#city");
+  let message = `${city}`;
+  let h1 = document.querySelector("h1");
+  let description = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity")
+  let wind = document.querySelector("#wind");
+  let date = document.querySelector("#date");
+  let icon = document.querySelector("#icon");
+
+celsiusTemperature = response.data.main.temp;
+h1.innerHTML = message;
+temperature.innerHTML = Math.round(celsusTemperature);
+city.innerHTML = response.data.name;
+description.innerHTML = response.data.weather[0].description;
+humidity.innerHTML = response.data.main.humidity;
+wind.innerHTML = Math.round(responde.data.wind.speed);
+date.innerHTML = formatDate(response.data.dt * 1000);
+icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+icon.setAttribute("alt", response.data.weather[0].description);
+}
+
 function searchCity(city) {
   let apiKey = "747707261d2068249e8900a1bcf9371c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -44,37 +69,14 @@ let city = document.querySelector("#city");
     }`;
  searchCity(searchInput.value);
 }
+
 let form = document.querySelector("#searchCityForm");
 form.addEventListener("submit", submitCity);
 
-function clickButtonC() {
-  let currentTemperature = document.querySelector("#celsius");
-  currentTemperature.innerHTML = `19°C`;
-}
+let celsiusLink = document.querySelector("celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-let clickC = document.querySelector("#celsiusButton");
-clickC.addEventListener("click", clickButtonC);
+let FahrenheitLink = document.querySelector("celsius-link");
+FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
-function clickButtonF() {
-  let currentTemperature = document.querySelector("#celsius");
-  currentTemperature.innerHTML = `66°F`;
-}
-
-let clickF = document.querySelector("#fahrenheitButton");
-clickF.addEventListener("click", clickButtonF);
-
-function showWeather(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let city = response.data.name;
-  let message = `${city}`;
-  let h1 = document.querySelector("h1");
-  let temperatureElement = document.querySelector("#celsius");
-  h1.innerHTML = message;
-  temperatureElement.innerHTML = `${temperature}`;
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
-    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-}
+searchCity("Sydney");
