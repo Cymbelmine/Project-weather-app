@@ -43,8 +43,6 @@ let celsiusTemperature = null;
 function showWeather(response) {
   let temperature = document.querySelector("#temperature");
   let city = document.querySelector("#city");
-  let message = `${city}`;
-  let h1 = document.querySelector("h1");
   let description = document.querySelector("#description");
   let humidity = document.querySelector("#humidity")
   let wind = document.querySelector("#wind");
@@ -52,7 +50,6 @@ function showWeather(response) {
   let icon = document.querySelector("#icon");
 
 celsiusTemperature = response.data.main.temp;
-h1.innerHTML = message;
 temperature.innerHTML = Math.round(celsusTemperature);
 city.innerHTML = response.data.name;
 description.innerHTML = response.data.weather[0].description;
@@ -93,11 +90,6 @@ axios.get(apiUrl).then(showForecast);
 function submitCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
-let city = document.querySelector("#city");
-  if (searchInput.value) {
-    city.innerHTML = `${
-      searchInput.value.charAt(0).toUpperCase() + searchInput.value.slice(1)
-    }`;
  searchCity(searchInput.value);
 }
 

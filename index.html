@@ -18,11 +18,9 @@
     <title>Weatherly</title>
 </head>
 <body>
-    <div class="main">
-        <div class="container all">
-            <small id="date">
-            </small>
-
+    <div class="container">
+<div class="weather-app-wrapper">
+    <div class="weather-app">
             <form id="searchCityForm" class="mb-3">
                 <div class="row">
                     <div class="row-9">
@@ -33,32 +31,32 @@
                     </div>
                     </div>
             </form>
+            <div class="overview">
             <h1 id="city"></h1>
             <ul>
+               <li id="date"></li>
                 <li id="description">
                 </li>
             </ul>
-            <div class="col-6" id="descriptors">
-                <ul>
-                    <li>Humidity: <span id="humidity"></span>%</li>
-                    <li>Wind: <span id="wind"></span> km/h</li>
-                </ul>
-            </div>
             <div class="row">
                 <div class="col-6">
-                    <div class="clearfix temperature">
+                    <div class="clearfix weather-temperature">
                         <img src="" alt="" id="icon" class="float-left">
                         <div class="float-left">
                         <strong id="temperature"></strong>
+                        <span class="units" id="celsius">
+                            <a href="#" id="celsius-link" class="active"> ºC</a> | <a href="#" id="fahrenheit-link" class="active">ºF</a>
+                        </span>
                     </div>
-                    <span class="units" id="celsius">
-                    <a href="#" id="celsius-link" class="active"> ºC</a> | <a href="#" id="fahrenheit-link" class="active">ºF</a>
-                    </span>
-                    <div class="float-left" id="unit">
+                                    </div>
+                                                    </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Humidity: <span id="humidity"></span>%</li>
+                                <li>Wind: <span id="wind"></span> km/h</li>
+                            </ul>
+                        </div>
                     </div>
-                    <br>
-                    <h5>Five days</h5>
-                </div>
                 <div class="row weather-forecast" id="forecast">
                 </div>
                     </div>
@@ -70,7 +68,7 @@
                 <a href="https://github.com/Cymbelmine/Project-weather-app/" target="_blank">GitHub</a>
             </footer>
         </div>
-        <script type="text/javascript" src="src/index.js"></script>
+        <script src="src/index.js"></script>
 </body>
 
 </html>
