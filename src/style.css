@@ -1,12 +1,13 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 h1 {
-  font-size: 24px;
+  font-size: 70px;
   font-weight: 100;
   color: #19456b;
-  line-height: 28px;
-  margin-bottom: 0;
+  line-height: 0px;
+  margin-bottom: 42px;
 }
 ul {
   margin: 0;
@@ -29,13 +30,14 @@ li:first-letter {
   margin: 30px auto;
 }
 .weather-app {
-  padding: 20px;
+  padding: 18px;
   border: 1px solid lightgrey;
   border-radius: 8px;
   background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
 }
 .overview {
-  margin-bottom: 18px;
+  margin-bottom: 7px;
+  padding-top: 0;
 }
 .weather-temperature img {
   margin-right: 6px;
@@ -92,7 +94,7 @@ li:first-letter {
 }
 #button {
   margin-top: 6px;
-  color: gray;
+  color: #16c79a;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   position: relative;
   left: 490px;
@@ -101,4 +103,16 @@ li:first-letter {
   width: 50%;
   position: relative;
   left: 290px;
+}
+#descriptors {
+  font-size: 20px;
+  padding: 4px;
+}
+#descriptors2 {
+  font-size: 20px;
+  padding: 4px;
+}
+#descriptors3 {
+  font-size: 18px;
+  padding: 4px;
 }
